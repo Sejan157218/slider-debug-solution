@@ -44,16 +44,19 @@ const selectItem = (event, img) => {
   if (item === -1) {
     sliders.push(img);
   } else if(item !== -1){
-    for( var i = 0; i < sliders.length; i++){ 
+  //   for( var i = 0; i < sliders.length; i++){ 
     
-      if ( sliders[i] === img) { 
+  //     if ( sliders[i] === img) { 
   
-        sliders.splice(i, 1); 
-      }
+  //       sliders.splice(i, 1); 
+  //     }
   
-  }
+  // }
+  //   element.classList.remove('added');
+    
+  const finded = sliders.find(data=>data===img);
+  sliders.splice(sliders.indexOf(finded), 1);
     element.classList.remove('added');
-    
   }
 }
 var timer
